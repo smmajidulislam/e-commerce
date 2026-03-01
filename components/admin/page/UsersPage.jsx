@@ -5,7 +5,6 @@ import { useGetUsersQuery } from "../../../features/apiSlice/usersApi";
 const UsersPage = () => {
   const { data, isLoading, isError } = useGetUsersQuery(10);
 
-  // ⭐ Skeleton Card Component
   const SkeletonCard = () => (
     <div className="p-5 rounded-xl shadow bg-white dark:bg-gray-800 animate-pulse">
       <div className="flex items-center gap-4">

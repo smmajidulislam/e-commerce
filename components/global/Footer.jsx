@@ -7,9 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-[#111] text-gray-700 dark:text-gray-300 mt-16">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Left Section */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               ShopLogo
@@ -26,7 +24,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Middle Section */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Quick Links
@@ -56,7 +53,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right Section */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Contact Us
@@ -70,7 +66,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Copyright */}
         <div className="border-t border-gray-300 dark:border-gray-700 mt-10 pt-6 text-center text-sm">
           © {new Date().getFullYear()} ShopLogo. All rights reserved.
         </div>

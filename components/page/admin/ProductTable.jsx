@@ -19,10 +19,8 @@ export default function ProductTable() {
         Product List
       </h2>
 
-      {/* Table Wrapper */}
       <div className="w-full overflow-x-auto rounded-xl shadow border dark:border-[#333]">
         <table className="w-full min-w-200 bg-white dark:bg-[#222]">
-          {/* Table Head */}
           <thead className="bg-gray-100 dark:bg-[#1a1a1a]">
             <tr className="text-left">
               <th className="p-4">Image</th>
@@ -34,14 +32,12 @@ export default function ProductTable() {
             </tr>
           </thead>
 
-          {/* Table Body */}
           <tbody>
             {products.map((product) => (
               <tr
                 key={product.id}
                 className="border-t dark:border-[#333] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition"
               >
-                {/* Image */}
                 <td className="p-4">
                   <div className="relative w-16 h-16 rounded-lg overflow-hidden">
                     <Image
@@ -53,27 +49,22 @@ export default function ProductTable() {
                   </div>
                 </td>
 
-                {/* Title */}
                 <td className="p-4 font-medium dark:text-white">
                   {product.title}
                 </td>
 
-                {/* Price */}
                 <td className="p-4 text-[#e11d48] font-semibold">
                   ${product.price}
                 </td>
 
-                {/* Old Price */}
                 <td className="p-4 line-through text-gray-400">
                   {product.oldPrice && `$${product.oldPrice}`}
                 </td>
 
-                {/* Rating */}
                 <td className="p-4 text-yellow-500 font-medium">
                   ⭐ {product.rating}
                 </td>
 
-                {/* Actions */}
                 <td className="p-4">
                   <div className="flex items-center justify-center gap-3">
                     <button
