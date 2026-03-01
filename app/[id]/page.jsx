@@ -4,6 +4,40 @@ import { Star } from "lucide-react";
 import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const product = products.find((item) => item.id === Number(id));
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+      description: "This product does not exist",
+    };
+  }
+
+  return {
+    title: `${product.title} | My Shop`,
+    description: `${product.description} - Only $${product.price}`,
+    openGraph: {
+      title: product.title,
+      description: product.description,
+      images: [
+        {
+          url: product.image,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.title,
+      description: product.description,
+      images: [product.image],
+    },
+  };
+}
+
 export default async function Page({ params }) {
   const { id } = await params;
 
