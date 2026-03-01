@@ -40,7 +40,7 @@ export default function AdminLayout({ children }) {
         </div>
 
         {/* Content */}
-        <main className="p-6 overflow-y-auto flex-1 w-full">{children}</main>
+        <main className=" overflow-y-auto flex-1 w-full">{children}</main>
       </div>
     </div>
   );

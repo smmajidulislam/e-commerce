@@ -1,9 +1,9 @@
-import Admin from "@/pages/Admin";
+import Technology from "@/pages/Technology";
 
 const page = () => {
   return (
     <>
-      <Admin />
+      <Technology />
     </>
   );
 };

@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Users, ShoppingBag, Settings } from "lucide-react";
+import { Home, Users, ShoppingBag, Cpu } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function AdminSidebar() {
   const pathname = usePathname();
 
   const menus = [
-    { name: "Dashboard", path: "/admin", icon: Home },
-    { name: "Users", path: "/admin/users", icon: Users },
+    { name: "Home", path: "/", icon: Home },
+    { name: "Users", path: "/users", icon: Users },
     { name: "Products", path: "/productslist", icon: ShoppingBag },
-    { name: "Settings", path: "/admin/settings", icon: Settings },
+    { name: "Technology", path: "/technology", icon: Cpu },
   ];
 
   return (
